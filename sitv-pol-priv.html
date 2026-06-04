@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — SITV+</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #111318;
+    --border: #1e2230;
+    --accent: #e8441a;
+    --accent2: #f97316;
+    --text: #e8eaf0;
+    --muted: #7a7f96;
+    --heading-font: 'Syne', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+  header {
+    position: relative;
+    padding: 72px 0 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(232,68,26,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 20px 8px 10px;
+    margin-bottom: 28px;
+  }
+
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-text {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+  }
+
+  h1 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 48px);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  h1 span {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .meta {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .toc {
+    margin: 48px 0 56px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+
+  .toc-title {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .toc ol {
+    list-style: none;
+    counter-reset: toc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+
+  .toc ol li {
+    counter-increment: toc;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .toc ol li::before {
+    content: counter(toc, decimal-leading-zero);
+    font-family: var(--heading-font);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .toc ol li a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc ol li a:hover { color: var(--text); }
+
+  .section {
+    margin-bottom: 48px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-top: 32px;
+  }
+
+  .section-num {
+    font-family: var(--heading-font);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    padding-top: 4px;
+    flex-shrink: 0;
+    min-width: 28px;
+  }
+
+  h2 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  p {
+    color: #c4c8d8;
+    margin-bottom: 14px;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+    color: #c4c8d8;
+    margin-bottom: 14px;
+  }
+
+  li { margin-bottom: 6px; }
+
+  strong { color: var(--text); font-weight: 500; }
+
+  .highlight-box {
+    background: rgba(232,68,26,0.08);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #d4c0ba;
+  }
+
+  .green-box {
+    background: rgba(34,197,94,0.07);
+    border-left: 3px solid #22c55e;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #b6d9c2;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-family: var(--heading-font);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .data-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: #c4c8d8;
+    vertical-align: top;
+  }
+
+  .data-table tr:nth-child(even) td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .contact-icon {
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .contact-info p { margin: 0; font-size: 13px; color: var(--muted); }
+  .contact-info a { color: var(--accent2); text-decoration: none; font-size: 15px; font-weight: 500; }
+  .contact-info a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    .toc ol { grid-template-columns: 1fr; }
+    h1 { font-size: 28px; }
+    .data-table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">
+    <div class="logo-icon">S+</div>
+    <span class="logo-text">SITV+</span>
+  </div>
+  <h1>Política de<br><span>Privacidad</span></h1>
+  <p class="meta">Última actualización: Junio 2025 &nbsp;·&nbsp; Versión 1.0</p>
+</header>
+
+<div class="container">
+
+  <nav class="toc">
+    <div class="toc-title">Contenido</div>
+    <ol>
+      <li><a href="#s1">Responsable del tratamiento</a></li>
+      <li><a href="#s2">Datos que recopilamos</a></li>
+      <li><a href="#s3">Datos que NO recopilamos</a></li>
+      <li><a href="#s4">Finalidad del tratamiento</a></li>
+      <li><a href="#s5">Compartición con terceros</a></li>
+      <li><a href="#s6">Almacenamiento local</a></li>
+      <li><a href="#s7">Retención de datos</a></li>
+      <li><a href="#s8">Seguridad</a></li>
+      <li><a href="#s9">Menores de edad</a></li>
+      <li><a href="#s10">Derechos del usuario</a></li>
+      <li><a href="#s11">Cambios a esta política</a></li>
+      <li><a href="#s12">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <div class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Responsable del Tratamiento</h2>
+    </div>
+    <p>La presente Política de Privacidad describe cómo <strong>SITV+</strong> ("la Aplicación", "nosotros") gestiona la información de sus usuarios.</p>
+    <p>Al utilizar la Aplicación, usted acepta las prácticas descritas en esta política. Si tiene alguna pregunta o solicitud relacionada con su privacidad, puede contactarnos a través del correo indicado al final de este documento.</p>
+  </div>
+
+  <div class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Datos que Recopilamos</h2>
+    </div>
+    <p>SITV+ está diseñada con un principio de <strong>mínima recopilación de datos</strong>. La información que la Aplicación puede procesar es la siguiente:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dato</th>
+          <th>Descripción</th>
+          <th>Propósito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>URLs / listas M3U</strong></td>
+          <td>Direcciones de fuentes multimedia ingresadas por el usuario</td>
+          <td>Reproducción del contenido configurado por el usuario</td>
+        </tr>
+        <tr>
+          <td><strong>Configuraciones locales</strong></td>
+          <td>Preferencias de la app (tema, idioma, fuentes guardadas)</td>
+          <td>Personalización de la experiencia de uso</td>
+        </tr>
+        <tr>
+          <td><strong>Información del dispositivo</strong></td>
+          <td>Modelo, versión de SO, identificadores técnicos anónimos</td>
+          <td>Diagnóstico de errores y compatibilidad</td>
+        </tr>
+        <tr>
+          <td><strong>Registros de errores</strong></td>
+          <td>Información técnica sobre fallos de la app (si aplica)</td>
+          <td>Mejora de la estabilidad de la Aplicación</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="green-box">
+      Toda la información mencionada se almacena <strong>localmente en el dispositivo del usuario</strong> y no se transmite a servidores externos de SITV+.
+    </div>
+  </div>
+
+  <div class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Datos que NO Recopilamos</h2>
+    </div>
+    <p>SITV+ <strong>no recopila ni almacena</strong> en ningún servidor propio la siguiente información:</p>
+    <ul>
+      <li>Nombre, apellidos o datos de identidad del usuario.</li>
+      <li>Dirección de correo electrónico ni número de teléfono.</li>
+      <li>Ubicación geográfica o GPS.</li>
+      <li>Historial de navegación o hábitos de consumo de contenido.</li>
+      <li>Datos bancarios, de pago o información financiera de ningún tipo.</li>
+      <li>Contenido multimedia reproducido por el usuario.</li>
+      <li>Contactos, fotos, archivos u otros recursos del dispositivo.</li>
+    </ul>
+    <div class="highlight-box">
+      <strong>Nota sobre el contenido:</strong> Las URLs y listas de reproducción que el usuario configure en la app se conectan directamente a los servidores del proveedor elegido por el usuario. SITV+ no interviene en esa comunicación ni tiene acceso a los datos que se intercambian entre el dispositivo del usuario y dichos servidores.
+    </div>
+  </div>
+
+  <div class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Finalidad del Tratamiento</h2>
+    </div>
+    <p>Los datos técnicos mínimos que se procesan tienen las siguientes finalidades:</p>
+    <ul>
+      <li><strong>Funcionamiento de la app:</strong> Permitir la reproducción multimedia configurada por el usuario.</li>
+      <li><strong>Persistencia de preferencias:</strong> Recordar configuraciones para mejorar la experiencia de uso.</li>
+      <li><strong>Diagnóstico técnico:</strong> Identificar y corregir errores de funcionamiento de la Aplicación.</li>
+    </ul>
+    <p>No utilizamos ningún dato con fines publicitarios, de marketing o para la elaboración de perfiles de usuario.</p>
+  </div>
+
+  <div class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Compartición con Terceros</h2>
+    </div>
+    <p>SITV+ <strong>no vende, alquila ni transfiere</strong> datos personales de sus usuarios a terceros.</p>
+    <p>Sin embargo, la Aplicación puede estar distribuida a través de plataformas de terceros (como Google Play Store u otras tiendas de aplicaciones), las cuales tienen sus propias políticas de privacidad independientes de las nuestras. Se recomienda revisar dichas políticas.</p>
+    <p>Asimismo, al reproducir contenido desde fuentes externas, el dispositivo del usuario establece una conexión directa con el servidor del proveedor de contenido. SITV+ no tiene responsabilidad ni control sobre las prácticas de privacidad de dichos proveedores externos.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Almacenamiento Local en el Dispositivo</h2>
+    </div>
+    <p>Las configuraciones, listas y preferencias guardadas por el usuario se almacenan <strong>localmente en el propio dispositivo</strong> mediante los mecanismos de almacenamiento proporcionados por el sistema operativo (como SharedPreferences en Android o equivalentes en otras plataformas).</p>
+    <p>Estos datos permanecen en el dispositivo del usuario y pueden ser eliminados en cualquier momento desinstalando la Aplicación o limpiando los datos de la misma desde la configuración del sistema operativo.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Retención de Datos</h2>
+    </div>
+    <p>Dado que SITV+ no almacena datos en servidores propios, no existe un período de retención en nuestra infraestructura.</p>
+    <p>Los datos almacenados localmente en el dispositivo del usuario persisten hasta que el usuario decida eliminarlos, ya sea desinstalando la app, borrando los datos de la aplicación desde la configuración del sistema, o usando las opciones de limpieza disponibles dentro de la propia Aplicación.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Seguridad</h2>
+    </div>
+    <p>Adoptamos medidas técnicas razonables para proteger la integridad de la Aplicación. Sin embargo, dado que SITV+ opera como un reproductor local sin servidores propios que almacenen datos de usuarios, el principal vector de riesgo para la seguridad de la información del usuario se encuentra en:</p>
+    <ul>
+      <li>La seguridad del propio dispositivo del usuario.</li>
+      <li>La seguridad de los proveedores de contenido externos que el usuario elija configurar.</li>
+    </ul>
+    <p>Recomendamos a los usuarios mantener su sistema operativo y la Aplicación actualizados, y utilizar únicamente fuentes de contenido de confianza.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Menores de Edad</h2>
+    </div>
+    <p>SITV+ no está dirigida a menores de 13 años. No recopilamos intencionalmente información de menores de edad.</p>
+    <p>Si usted es padre, madre o tutor legal y tiene conocimiento de que un menor ha proporcionado información a través de la Aplicación, le pedimos que se comunique con nosotros para que podamos tomar las medidas pertinentes.</p>
+    <p>El control del contenido al que acceden los menores a través de la Aplicación es responsabilidad exclusiva del adulto a cargo del dispositivo.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2>Derechos del Usuario</h2>
+    </div>
+    <p>En la medida que resulte aplicable según las leyes de su jurisdicción, usted tiene los siguientes derechos respecto a su información:</p>
+    <ul>
+      <li><strong>Acceso:</strong> Conocer qué información de usted obra en nuestra posesión (que, como se ha indicado, es mínima o inexistente en nuestros servidores).</li>
+      <li><strong>Rectificación:</strong> Corregir información incorrecta.</li>
+      <li><strong>Eliminación:</strong> Solicitar la eliminación de sus datos. Para los datos locales, puede hacerlo directamente desde la configuración de su dispositivo.</li>
+      <li><strong>Portabilidad:</strong> Solicitar una copia de su información en formato legible.</li>
+      <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos con fines distintos a los indicados en esta política.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, contáctenos a través del correo electrónico indicado en la sección de contacto.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <div class="section-header">
+      <span class="section-num">11</span>
+      <h2>Cambios a Esta Política</h2>
+    </div>
+    <p>Podemos actualizar esta Política de Privacidad periódicamente. Cuando lo hagamos, revisaremos la fecha de "Última actualización" en la parte superior de esta página.</p>
+    <p>Le recomendamos revisar esta política con regularidad. El uso continuado de la Aplicación tras la publicación de cambios constituirá su aceptación de la política revisada.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <div class="section-header">
+      <span class="section-num">12</span>
+      <h2>Contacto</h2>
+    </div>
+    <p>Para cualquier consulta, solicitud o inquietud relacionada con esta Política de Privacidad o el tratamiento de sus datos, puede contactarnos en:</p>
+    <div class="contact-card">
+      <div class="contact-icon">🔒</div>
+      <div class="contact-info">
+        <p>Correo electrónico de privacidad</p>
+        <a href="mailto:privacidad@sitvplus.com">privacidad@sitvplus.com</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 SITV+ — Todos los derechos reservados. &nbsp;·&nbsp; Política de Privacidad v1.0
+</footer>
+
+</body>
+</html>
