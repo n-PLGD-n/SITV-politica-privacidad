@@ -7,11 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #080d18;
-    --surface: #0d1628;
-    --border: #1a2a4a;
-    --accent: #F5C200;
-    --accent2: #FFD700;
+    --bg: #07131f;
+    --surface: #0B223F;
+    --border: #163050;
+    --accent: #D4AF37;
+    --accent2: #e8c84a;
     --text: #e8eaf0;
     --muted: #6a7a9a;
     --heading-font: 'Syne', sans-serif;
@@ -41,23 +41,18 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(245,194,0,0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(212,175,55,0.14) 0%, transparent 70%);
     pointer-events: none;
   }
 
   .logo-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 10px 20px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
   .logo-png {
-    height: 36px;
+    height: 90px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -192,7 +187,7 @@
   strong { color: var(--text); font-weight: 500; }
 
   .highlight-box {
-    background: rgba(245,194,0,0.08);
+    background: rgba(212,175,55,0.07);
     border-left: 3px solid var(--accent);
     border-radius: 0 8px 8px 0;
     padding: 16px 20px;
